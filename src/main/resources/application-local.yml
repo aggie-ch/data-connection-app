@@ -1,0 +1,3 @@
+API_REST: https://www.random.org/integers/?num=1&min=%s&max=%s&col=1&base=10&format=plain&rnd=new
+MINIMUM_VALUE: 0
+MAXIMUM_VALUE: 100
