@@ -1,11 +1,10 @@
-package io.github.aggie.join.type;
+package io.github.aggie.join.strategy;
 
 import io.github.aggie.data.source.DataSource;
-import io.github.aggie.join.JoinFacade;
 
 import java.util.Optional;
 
-public class Addition implements JoinFacade<Integer> {
+public class SumJoinStrategy implements JoinStrategy<Integer> {
     @Override
     public Integer dataOperation(DataSource<Integer> data1, DataSource<Integer> data2) {
         Optional<Integer> number1 = Optional.ofNullable(data1.dataGenerate());
