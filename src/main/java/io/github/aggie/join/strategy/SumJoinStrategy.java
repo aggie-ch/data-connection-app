@@ -7,12 +7,12 @@ import java.util.Optional;
 public class SumJoinStrategy implements JoinStrategy<Integer> {
     @Override
     public Integer doJoin(DataSource<Integer> data1, DataSource<Integer> data2) {
-        Optional<Integer> number1 = Optional.ofNullable(data1.dataGenerate());
-        Optional<Integer> number2 = Optional.ofNullable(data2.dataGenerate());
+        Optional<DataSource<Integer>> number1 = Optional.ofNullable(data1);
+        Optional<DataSource<Integer>> number2 = Optional.ofNullable(data2);
         Integer result = null;
 
         if (number1.isPresent() && number2.isPresent()) {
-            result = number1.get() + number2.get();
+            result = number1.get().dataGenerate() + number2.get().dataGenerate();
         } else {
             throw new IllegalArgumentException("Data should not be empty");
         }
