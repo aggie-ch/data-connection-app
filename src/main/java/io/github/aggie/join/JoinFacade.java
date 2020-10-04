@@ -1,7 +1,7 @@
 package io.github.aggie.join;
 
-import io.github.aggie.data.DataFacade;
+import io.github.aggie.data.source.DataSource;
 
 public interface JoinFacade<T> {
-    T dataOperation(DataFacade<T> data1, DataFacade<T> data2);
+    T dataOperation(DataSource<T> data1, DataSource<T> data2);
 }

@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class RandomNumberAPIGeneratorTest {
+public class ApiDataSourceGeneratorTest {
 
     @Test
     public void dataGenerate() {
         // given
         ConfigProperties configProperties = new ConfigProperties();
-        RandomNumberAPI randomNumberAPIGenerator = new RandomNumberAPI(configProperties);
+        ApiDataSource apiDataSourceGenerator = new ApiDataSource(configProperties);
 
         // when
-        Integer random = randomNumberAPIGenerator.dataGenerate();
+        Integer random = apiDataSourceGenerator.dataGenerate();
 
         // then
         assertNotNull(random);

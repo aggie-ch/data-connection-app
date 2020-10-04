@@ -1,13 +1,11 @@
 package io.github.aggie.data.source;
 
-import io.github.aggie.data.DataFacade;
-
 import java.util.Random;
 
-public class RandomNumberJava implements DataFacade<Integer> {
+public class RandomDataSource implements DataSource<Integer> {
     private Random random;
 
-    public RandomNumberJava() {
+    public RandomDataSource() {
         this.random = new Random();
     }
 

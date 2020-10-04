@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class RandomNumberJavaGeneratorTest {
+public class RandomDataSourceGeneratorTest {
 
     @Test
     public void dataGenerate() {
         // given
-        RandomNumberJava randomJavaGenerator = new RandomNumberJava();
+        RandomDataSource randomJavaGenerator = new RandomDataSource();
 
         // when
         Integer random = randomJavaGenerator.dataGenerate();

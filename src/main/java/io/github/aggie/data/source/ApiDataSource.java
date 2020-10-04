@@ -1,7 +1,6 @@
 package io.github.aggie.data.source;
 
 import io.github.aggie.cfg.ConfigProperties;
-import io.github.aggie.data.DataFacade;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,10 +8,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class RandomNumberAPI implements DataFacade<Integer> {
+public class ApiDataSource implements DataSource<Integer> {
     private final ConfigProperties configProperties;
 
-    public RandomNumberAPI(ConfigProperties configProperties) {
+    public ApiDataSource(ConfigProperties configProperties) {
         this.configProperties = configProperties;
     }
 
